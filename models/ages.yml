@@ -7,25 +7,25 @@ models:
       description: "Calculates patient ages in years"
       columns:
           - name: DESYNPUF_ID
-	    description: "Unique beneficiary ID"
-	    tests:
-	        - unique
-		- not_null
+            description: "Unique beneficiary ID"
+            tests:
+                - unique
+                - not_null
           - name: BENE_BIRTH_DT
-	    description: "Date of birth string"
-	    tests:
-		- not_null
+            description: "Date of birth string"
+            tests:
+                - not_null
           - name: BENE_DEATH_DT
-	    description: "Date of death string"
+            description: "Date of death string"
           - name: DOB
-	    description: "Date of birth in date format"
-	    tests:
-		- not_null
+            description: "Date of birth in date format"
+            tests:
+                - not_null
           - name: today
-	    description: "Today's date"
-	    tests:
-		- not_null
-          - name: age
-	    description: "Patient age in years"
-	    tests:
-		- not_null
+            description: "Today's date"
+            tests:
+                - not_null
+                - name: age
+            description: "Patient age in years"
+            tests:
+                - not_null
