@@ -3,26 +3,16 @@
 version: 2
 
 models:
-    - name: ages
-      description: "Calculates patient ages in years"
+    - name: beneficiaries_over_100
+      description: "Gives patients with >= 100 years of age"
       columns:
           - name: DESYNPUF_ID
             description: "Unique beneficiary ID"
             tests:
                 - unique
                 - not_null
-          - name: BENE_BIRTH_DT
-            description: "Date of birth string"
-            tests:
-                - not_null
-          - name: BENE_DEATH_DT
-            description: "Date of death string"
           - name: DOB
             description: "Date of birth in date format"
-            tests:
-                - not_null
-          - name: today
-            description: "Today's date"
             tests:
                 - not_null
           - name: age
